@@ -3,7 +3,7 @@
 *@
 @{
 }
-<form method='post'>
+<form method='post' action="/spa">
 
     Name:
     <br>
@@ -21,11 +21,15 @@
     <br>
 
     Manicure or Pedicure?
-    <br>    
-    <select name='manipedi'>
+    <br>
+    <input type="checkbox" id="Manicure" name="Manicure" data-val="true" and value="true"/>
+    <label for="Manicure">Manicure</label>
+    <input type="checkbox" id="Pedicure" name="Pedicure" data-val="true" and value="true"/>
+    <label for="Pedicure">Pedicure</label>
+    <!--<select name='manipedi'>
         <option value='manicure'>Manicure</option>    
         <option value='pedicure'>Pedicure</option>      
-    </select>
+    </select>-->
     <br>
     
     <input type='submit' value='Submit'>    

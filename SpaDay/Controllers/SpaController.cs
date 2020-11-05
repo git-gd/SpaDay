@@ -32,7 +32,7 @@ namespace SpaDay.Controllers
             return true;
 
         }
-
+        [Route("/form")]
         public IActionResult Index()
         {
             return View();
@@ -40,8 +40,13 @@ namespace SpaDay.Controllers
 
         [HttpPost]
         [Route("/spa")]
-        public IActionResult Menu(string name, string skintype, string manipedi)
+        public IActionResult Menu(string name, string skintype, string manicure, string pedicure)
         {
+            ViewBag.name = String.IsNullOrEmpty(name)?"Valued Customer":name;
+            ViewBag.skintype = skintype;
+            ViewBag.manicure = manicure;
+            ViewBag.pedicure = pedicure;
+
             List<string> facials = new List<string>()
             {
                 "Microdermabrasion", "Hydrofacial", "Rejuvenating", "Enzyme Peel"
@@ -55,6 +60,9 @@ namespace SpaDay.Controllers
                     appropriateFacials.Add(facials[i]);
                 }
             }
+
+            ViewBag.appropriateFacials = appropriateFacials;
+
             return View();
         }
 
