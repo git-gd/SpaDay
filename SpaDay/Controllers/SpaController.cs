@@ -40,10 +40,10 @@ namespace SpaDay.Controllers
 
         [HttpPost]
         [Route("/spa")]
-        public IActionResult Menu(string name, string skintype, string manicure, string pedicure)
+        public IActionResult Menu(string name, string skinType, string manicure, string pedicure)
         {
             ViewBag.name = String.IsNullOrEmpty(name)?"Valued Customer":name;
-            ViewBag.skintype = skintype;
+            ViewBag.skintype = skinType;
             ViewBag.manicure = manicure;
             ViewBag.pedicure = pedicure;
 
@@ -55,7 +55,7 @@ namespace SpaDay.Controllers
             List<string> appropriateFacials = new List<string>();
             for (int i = 0; i < facials.Count; i++)
             {
-                if (CheckSkinType(skintype, facials[i]))
+                if (CheckSkinType(skinType, facials[i]))
                 {
                     appropriateFacials.Add(facials[i]);
                 }
