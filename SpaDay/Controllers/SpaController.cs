@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -32,6 +30,8 @@ namespace SpaDay.Controllers
             return true;
 
         }
+
+        [Route("/")] // combined with the changes made to Startup.cs, this default path loads our form and skips the Home controller
         [Route("/form")]
         public IActionResult Index()
         {

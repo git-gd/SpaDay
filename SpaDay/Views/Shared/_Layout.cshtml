@@ -6,6 +6,16 @@
     <title>@ViewData["Title"] - SpaDay</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("css", false) @*This lets us inject HTML into our <head>*@
+    @*
+        RenderSection (string name, bool required);
+
+        Parameters:
+
+            String  name      - The section to render.
+
+            Boolean required  - Indicates if this section must be rendered.
+    *@
 </head>
 <body>
     <header>

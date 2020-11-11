@@ -1,37 +1,37 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@section css {<link rel="stylesheet" href="~/css/spa.css" />}
+
 <form method='post' action="/spa">
 
     Name:
     <br>
-    <input type='text' name='name'>    
+    <input type='text' name='name'>
     <br>
 
     Skin type:
-    <br>    
+    <br>
     <select name='skintype'>
-        <option value='oily'>Oily</option>    
-        <option value='combination'>Combination</option>    
-        <option value='normal'>Normal</option>    
-        <option value='dry'>Dry</option>    
+        <option value='oily'>Oily</option>
+        <option value='combination'>Combination</option>
+        <option value='normal'>Normal</option>
+        <option value='dry'>Dry</option>
     </select>
     <br>
 
     Manicure or Pedicure?
     <br>
-    <input type="checkbox" id="Manicure" name="Manicure" data-val="true" and value="true"/>
+    <input type="checkbox" id="Manicure" name="Manicure" data-val="true" and value="true" />
     <label for="Manicure">Manicure</label>
-    <input type="checkbox" id="Pedicure" name="Pedicure" data-val="true" and value="true"/>
+    <input type="checkbox" id="Pedicure" name="Pedicure" data-val="true" and value="true" />
     <label for="Pedicure">Pedicure</label>
-    <!--<select name='manipedi'>
-        <option value='manicure'>Manicure</option>    
-        <option value='pedicure'>Pedicure</option>      
+    <!--
+        Checkboxes replaced the select input to allow both pedicure and manicure to be selected
+        
+        <select name='manipedi'>
+        <option value='manicure'>Manicure</option>
+        <option value='pedicure'>Pedicure</option>
     </select>-->
     <br>
-    
-    <input type='submit' value='Submit'>    
-     
+
+    <input type='submit' value='Submit'>
+
 </form>

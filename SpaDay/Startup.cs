@@ -50,7 +50,8 @@ namespace SpaDay
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    //pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Spa}/{action=Index}/{id?}");
             });
         }
     }
