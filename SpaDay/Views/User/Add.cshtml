@@ -1,8 +1,16 @@
-﻿<form method="post" action="/user">
+﻿@{ 
+    if (!String.IsNullOrEmpty(ViewBag.UserName))
+    {<h1>Password was not verified! Please try again.</h1>}
+}
+
+<form method="post" asp-controller="User" asp-action="SubmitAddUserForm">
     <label for="UserName">User Name: </label>
-    <input name="UserName" type="text" />
+    <input name="UserName" type="text" value="@ViewBag.UserName"/>
     <label for="Password">Password: </label>
     <input name="Password" type="password" />
+    <label for="Verify">Verify Password: </label>
+    <input name="Verify" type="password" />
     <label for="Email">Email: </label>
-    <input name="Email" type="email" />
+    <input name="Email" type="email" value="@ViewBag.Email"/>
+    <input type="submit" value="Submit"/>
 </form>
