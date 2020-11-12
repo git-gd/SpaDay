@@ -1,5 +1,7 @@
 ﻿@{ 
     string userName = String.IsNullOrEmpty(ViewBag.UserName) ? "Unknown Person" : ViewBag.UserName;
 }
-
-<h1>Hello @userName</h1>
+<h5>Hello @userName</h5>
+<p>Email: @ViewBag.Email</p>
+<p>Member Since: @ViewBag.Date</p>
+<a asp-controller="Spa" asp-action="Index">Spa</a>
