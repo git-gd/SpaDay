@@ -13,6 +13,8 @@ namespace SpaDay.Controllers
     { 
         public IActionResult Index()
         {
+            ViewBag.User = TempData["User"] as User;
+
             return View();
         }
 
